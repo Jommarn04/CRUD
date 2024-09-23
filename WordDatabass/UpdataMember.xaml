@@ -1,0 +1,147 @@
+﻿<Window x:Class="WordDatabass.UpdataMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordDatabass"
+        mc:Ignorable="d"
+        Height="600" 
+        Width="1000"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="450"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                Width="600"
+                Height="600"
+                Background="#fff"
+                CornerRadius="10 0 0 10">
+                <Image Source="/Images/image2.png"/>
+            </Border>
+
+            <Border Background="#fff"
+                Grid.Column="1"
+                CornerRadius="0 10 10 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Style="{StaticResource btn_close}"
+                        Margin="5"
+                        x:Name="btn_close"
+                        Click="btn_close_Click"/>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="เพิ่มข้อมูลสมาชิก"
+                            Style="{StaticResource TextblockHeader_Style_member}"/>
+                        <TextBlock Style="{StaticResource TextblockText_Style}"
+                            Margin="70 5 0 0"
+                            Foreground="#B9B4C7"
+                            HorizontalAlignment="Left"
+                            Text="กรุณากรอกข้อมูลด้านล่างให้ครบถ้วน"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <TextBox Style="{StaticResource Textbox_Style}"
+                            Width="90"
+                            Height="40"
+                            Margin="0 0 20 0"
+                            x:Name="txt1"/>
+                        <ComboBox Style="{StaticResource ComboBoxFlatStyle}"
+                            Width="90"
+                            Height="45"
+                            Tag="กรุณาเลือก"
+                            x:Name="combobox1"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" 
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <TextBox Style="{StaticResource Textbox_Style}"
+                            Width="150"
+                            Height="45"
+                            Margin="0 0 10 0"
+                            Tag="กรุณาป้อนชื่อ"
+                            x:Name="txt2"/>
+                        <TextBox Style="{StaticResource Textbox_Style}"
+                            Width="150"
+                            Height="45"
+                            Tag="กรุณาป้อนนามสกุล"
+                            x:Name="txt3"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" 
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <TextBox Style="{StaticResource Textbox_Style}"
+                            Width="310"
+                            Height="45"
+                            Tag="กรุณาป้อน Email"
+                            x:Name="txt5"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" 
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <TextBox Style="{StaticResource Textbox2_Style}"
+                            Width="120"
+                            Height="45"
+                            Tag="ป้อนรหัสนักเรียน"
+                            x:Name="txt4"
+                            Margin="0 0 10 0"/>
+                        <TextBox Style="{StaticResource Textbox_Style}"
+                            Width="180"
+                            Height="45"
+                            Tag="กรุณาป้อนเบอร์โทร"
+                            x:Name="txt6"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" 
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                        <ComboBox Style="{StaticResource ComboBoxFlatStyle}"
+                            Width="150"
+                            Height="45"
+                            Margin="0 0 20 0"
+                            Tag="กรุณาเลือก"
+                            x:Name="combobox2"/>
+                        <ComboBox Style="{StaticResource ComboBoxFlatStyle}"
+                            Width="90"
+                            Height="45"
+                            Tag="กรุณาเลือก"
+                            x:Name="combobox3"/>
+                    </StackPanel>
+                    <Button Style="{StaticResource btn_AddMember}"
+                        Grid.Row="6"
+                        Content="เพิ่มข้อมมูล"
+                        Click="btn_Add"/>
+                    <StackPanel Grid.Row="7"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 -3 0 0">
+                        <Button Style="{StaticResource btn_openDatagrid}"
+                            VerticalAlignment="Top"
+                            Content="ข้อมูลสมาชิก"
+                            Click="btn_openmember"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>

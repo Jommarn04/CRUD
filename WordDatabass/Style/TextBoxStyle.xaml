@@ -1,0 +1,255 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fa="http://schemas.fontawesome.io/icons/">
+
+
+    <!--TextboxStudentID_Style-->
+    <Style x:Key="TextboxStID_Style" TargetType="TextBox">
+        <Setter Property="Background" Value="#fff"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="BorderBrush" Value="#ffff"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Foreground" Value="#9BABB8"/>
+        <Setter Property="Padding" Value="25 0 0 2"/>
+        <Setter Property="Cursor" Value="IBeam"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="AllowDrop" Value="True"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15">
+
+                        <Grid>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Focusable="True"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          Margin="-2 8"/>
+
+                            <Label x:Name="Tlabel"
+                                   VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Left"
+                                   Padding="{TemplateBinding Padding}"
+                                   Visibility="Collapsed"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontWeight="Medium"
+                                   Content="{TemplateBinding Tag}"/>
+
+                        </Grid>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility"
+                                    TargetName="Tlabel"
+                                    Value="Visible"/>
+                        </MultiTrigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#8294C4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Textbox_Style-->
+    <Style x:Key="Textbox_Style" TargetType="TextBox">
+        <Setter Property="Background" Value="#fff"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="45"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontFamily" Value="/font/#thai"/>
+        <Setter Property="BorderBrush" Value="#7D7C7C"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="#7D7C7C"/>
+        <Setter Property="Padding" Value="25 2 0 0"/>
+        <Setter Property="Cursor" Value="IBeam"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="AllowDrop" Value="True"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+
+                        <Grid>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Focusable="True"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          Margin="-2 11"/>
+                            <Label x:Name="Tlabel"
+                                   VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Left"
+                                   Padding="{TemplateBinding Padding}"
+                                   Visibility="Collapsed"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontWeight="Medium"
+                                   Content="{TemplateBinding Tag}"/>
+
+                        </Grid>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility"
+                                    TargetName="Tlabel"
+                                    Value="Visible"/>
+                        </MultiTrigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#8294C4"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="#322653"/>
+                            <Setter Property="Foreground" Value="#322653"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Textbox2_Style-->
+    <Style x:Key="Textbox2_Style" TargetType="TextBox">
+        <Setter Property="Background" Value="#fff"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="45"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="BorderBrush" Value="#7D7C7C"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="#7D7C7C"/>
+        <Setter Property="Padding" Value="18 2 0 0"/>
+        <Setter Property="Cursor" Value="IBeam"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="AllowDrop" Value="True"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4">
+
+                        <Grid>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Focusable="True"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          Margin="-2 11"/>
+                            <Label x:Name="Tlabel"
+                                   VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Left"
+                                   Padding="{TemplateBinding Padding}"
+                                   Visibility="Collapsed"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontWeight="Medium"
+                                   Content="{TemplateBinding Tag}"/>
+
+                        </Grid>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility"
+                                    TargetName="Tlabel"
+                                    Value="Visible"/>
+                        </MultiTrigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#8294C4"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="#322653"/>
+                            <Setter Property="Foreground" Value="#322653"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--TextboxSearch_Style-->
+    <Style x:Key="TextboxSearch_Style" TargetType="TextBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontFamily" Value="/font/#thai"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#000"/>
+        <Setter Property="Padding" Value="25 -2 0 0"/>
+        <Setter Property="Cursor" Value="IBeam"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="AllowDrop" Value="True"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10">
+
+                        <Grid>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Focusable="True"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          Margin="-2 11"/>
+                            <Label x:Name="Tlabel"
+                                   VerticalContentAlignment="Center"
+                                   HorizontalContentAlignment="Left"
+                                   Padding="{TemplateBinding Padding}"
+                                   Visibility="Collapsed"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontWeight="Medium"
+                                   Content="{TemplateBinding Tag}"/>
+                        </Grid>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility"
+                                    TargetName="Tlabel"
+                                    Value="Visible"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+
+</ResourceDictionary>

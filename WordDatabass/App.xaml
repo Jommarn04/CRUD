@@ -1,0 +1,19 @@
+﻿<Application x:Class="WordDatabass.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WordDatabass"
+             StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="/Style/TextBlockStyle.xaml"/>
+                <ResourceDictionary Source="/Style/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="/Style/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="/Style/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="/Style/Animation.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
